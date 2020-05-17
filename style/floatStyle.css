@@ -1,0 +1,69 @@
+/* 整体布局样式    自定义样式left top*/
+#hrxt-feedBack {
+  position: fixed;
+  z-index: 1;
+  cursor: pointer;
+  left: 50%;
+}
+/*弹出层*/
+#hrxt-pop-container {
+  z-index: 99999999;
+  height: 100%;
+  width: 100%;
+  filter: alpha(opacity=50);
+  position: fixed;
+  background: rgba(0,0,0,.7);
+  top:0;
+  left:0;
+}
+/*dialog内容栏*/
+.hrxt-dialog-content{
+  width: 59%;
+  height:78%;
+  margin: 0px auto;
+  padding: 5% 20% 15% 20%;
+  z-index: 9999999999;    
+  box-sizing: initial;
+}
+
+/* 关闭按钮 */
+#hrxt-close-pop {
+  position: absolute;
+  right: 20.5%;
+  /*本地 */ 
+  background: url("../image/close-black.png") no-repeat 0 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: block;
+  margin: 7px;
+  background-size:cover
+}
+#clickImg{
+	width:100px;
+	height:100px;
+}
+/* 弹窗效果 */
+.animated {
+  -webkit-animation-duration:0.5s;
+  -ms-animation-duration:0.5s;
+  animation-duration:0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+}
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn
+}
+@keyframes zoomIn {
+  0% {
+      opacity: 0.5;
+      -webkit-transform: scale3d(0.4,0.6,0.3);
+      transform: scale3d(0.4,0.6,0.3);
+      -ms-transform: scale3d(0.4,0.6,0.3); 
+  }
+  50% {
+      opacity: 1
+  }
+}
